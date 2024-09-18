@@ -1,5 +1,6 @@
 "use client"
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation"
@@ -27,9 +28,11 @@ export const SigninForm = () => {
                 onChange={text => setPasswordField(text)}
                 password
             />
-            <button onClick={handleEnterButton}>
-                Entrar
-            </button>
+            <Button
+                label="Entrar"
+                onClick={handleEnterButton}
+                size={1}
+            />
         </>
     )
 }
